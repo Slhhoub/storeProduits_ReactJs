@@ -1,4 +1,5 @@
 ✅ Fonctionnalités réalisées dans mon projet React :
+
 🔄 Récupération des données depuis une API
 J’ai utilisé la méthode fetch() pour appeler une API REST et récupérer une liste de produits.
 Pour gérer les appels asynchrones, j’ai utilisé les mots-clés async et await.
