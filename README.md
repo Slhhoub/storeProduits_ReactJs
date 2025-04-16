@@ -1,58 +1,37 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+✅ Fonctionnalités réalisées dans mon projet React :
+🔄 Récupération des données depuis une API
+J’ai utilisé la méthode fetch() pour appeler une API REST et récupérer une liste de produits.
+Pour gérer les appels asynchrones, j’ai utilisé les mots-clés async et await.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🧠 Utilisation des Hooks React
 
-Currently, two official plugins are available:
+useState m’a permis de gérer l’état de l’application, comme la liste des produits ou la pagination.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+useEffect m’a servi à exécuter du code au chargement du composant, notamment pour appeler l’API.
 
-## Expanding the ESLint configuration
+📦 Utilisation de bibliothèques externes
+J’ai intégré react-toastify afin d’afficher des notifications visuelles lors d’actions comme :
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+la suppression d’un produit,
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+l’ajout ou la modification.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+📩 Passage de données via les props
+J’ai utilisé les props pour transmettre des données entre composants, ce qui montre que je maîtrise la communication entre les composants React.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🧮 Mise en place d’une pagination
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-=======
-# storeProduits_ReactJs
->>>>>>> 00223643dd11e79db582e221a60280332b032709
+J’ai divisé les produits en plusieurs pages.
+
+J’ai calculé dynamiquement le nombre total de pages avec Math.ceil().
+
+J’ai généré la liste des pages avec Array.from() et mis en place les boutons Previous, Next et la sélection directe d’une page.
+
+🗑️ Suppression dynamique avec mise à jour de l’état
+Quand un produit est supprimé :
+
+Je mets à jour l’état de la liste des produits,
+
+Je recalcule les produits affichés,
+
+Et j’ajuste automatiquement la pagination si nécessaire.
